@@ -411,8 +411,8 @@
 		padding: 10px;
 		border-radius: 22px;
 		background:
-			radial-gradient(220px 160px at 25% 20%, rgba(255, 255, 255, 0.856), transparent 60%),
-			rgba(226, 226, 226, 0.616);
+			radial-gradient(220px 160px at 25% 20%, rgba(255, 255, 255, 0.18), transparent 60%),
+			rgba(255, 255, 255, 0.08);
 		border: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
@@ -466,8 +466,8 @@
 	}
 
 	.tile.empty {
-		background: rgb(255, 255, 255);
-		border: 1px dashed rgb(0, 13, 53);
+		background: rgba(255, 255, 255, 0.06);
+		border: 1px dashed rgba(255, 255, 255, 0.18);
 		box-shadow: none;
 		cursor: default;
 	}
@@ -574,6 +574,58 @@
 		}
 		.boardShell {
 			padding: 16px;
+		}
+	}
+
+	/* --- Desktop polish: center the "mobile game" and soften the background --- */
+	@media (min-width: 900px) {
+		:global(body) {
+			/* neutral dark desktop backdrop */
+			background:
+				radial-gradient(900px 600px at 50% 20%, rgba(255, 255, 255, 0.06), transparent 60%),
+				linear-gradient(180deg, #070a12 0%, #050714 100%);
+		}
+
+		.app {
+			/* remove the loud mobile wallpaper on desktop */
+			background: transparent;
+			min-height: 100vh;
+			padding: 32px;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.stage {
+			width: 100%;
+			max-width: 520px;
+		}
+
+		.hud,
+		.toast,
+		.miniHelp {
+			width: 520px;
+		}
+
+		.boardShell {
+			width: 520px;
+			border-radius: 32px;
+			padding: 18px;
+			background: rgba(255, 255, 255, 0.07);
+			border: 1px solid rgba(255, 255, 255, 0.14);
+			box-shadow:
+				0 40px 110px rgba(0, 0, 0, 0.55),
+				inset 0 1px 0 rgba(255, 255, 255, 0.12);
+			position: relative;
+		}
+
+		.boardShell::before {
+			content: '';
+			display: block;
+			height: 10px;
+			width: 120px;
+			margin: 2px auto 12px;
+			border-radius: 999px;
+			background: rgba(255, 255, 255, 0.12);
 		}
 	}
 </style>
