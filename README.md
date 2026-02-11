@@ -47,6 +47,7 @@ This improves perceived performance and provides an app-like experience on suppo
     └── assets/
         └── favicon.svg
 ```
+
 ---
 
 ## Getting Started
