@@ -157,31 +157,6 @@
 
 <style>
 	/* --- Mobile-game baseline --- */
-	:global(html, body) {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-	}
-
-	:global(body) {
-		font-family:
-			system-ui,
-			-apple-system,
-			Segoe UI,
-			Roboto,
-			Helvetica,
-			Arial;
-		color: rgba(255, 255, 255, 0.92);
-		background: #070a12;
-		overflow-x: hidden;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-	}
-
-	:global(*) {
-		box-sizing: border-box;
-	}
-
 	/* Prevent annoying tap highlight + double-tap zoom-ish behavior */
 	button {
 		-webkit-tap-highlight-color: transparent;
