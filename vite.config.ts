@@ -12,7 +12,7 @@ export default defineConfig({
 				name: 'Sliding Puzzle',
 				short_name: 'Puzzle',
 				description: 'Sliding Puzzle',
-				start_url: '/dashboard',
+				start_url: '/',
 				display: 'standalone',
 				background_color: '#ffffff',
 				theme_color: '#022F49',
